@@ -141,7 +141,7 @@ export const showEdit = async (item) => {
       const videoInput = document.getElementById("videoInput").value.trim();
 
       if (!form.checkValidity()) {
-        form.reportValidity(); // Muestra los mensajes nativos de validación del navegador.
+        form.reportValidity();
         return false;
       }
 

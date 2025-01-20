@@ -25,7 +25,7 @@ export const DataProvider = ({ children }) => {
   const editVideo = (updatedVideo) => {
     setData((prevData) =>
       prevData.map((video) =>
-        video.id === updatedVideo.id ? updatedVideo : video
+        video.id === updatedVideo.id ? { ...video, ...updatedVideo } : video
       )
     );
   };

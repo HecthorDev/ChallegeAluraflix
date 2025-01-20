@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import DataContext from '../context/context';
 import { showSuccessAlert, showErrorAlert } from '../utils/alerts';
 import { useNavigate } from 'react-router-dom';
-import '../css/NewVideo.css'; // Importar el CSS
+import '../css/NewVideo.css'; 
 
 const options = ['Front End', 'Back End', 'Innovación y Gestión'];
 

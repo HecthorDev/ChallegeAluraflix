@@ -21,7 +21,7 @@ const Banner = () => {
     setStartPos({ x: e.clientX, y: e.clientY });
   };
 
-  // Ordena los datos por ID de forma descendente y toma los primeros 18 elementos
+
   const lastData = [...data].sort((a, b) => b.id - a.id).slice(0, 18);
 
   return (

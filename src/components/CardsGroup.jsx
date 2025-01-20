@@ -4,6 +4,7 @@ import Card from './Card';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { motion } from 'framer-motion';
+import '../css/CardsGroup.css'; 
 
 const responsive = {
   superLargeDesktop: {
@@ -34,8 +35,11 @@ const CardsGroup = (props) => {
     removeVideo(videoId);
   };
 
-  const handleEdit = (item) => {
-    editVideo(item);
+  const handleEdit = async (item) => {
+    const updatedVideo = await showEdit(item);
+    if (updatedVideo && updatedVideo.value) {
+      editVideo(updatedVideo.value);
+    }
   };
 
   return (
@@ -46,7 +50,13 @@ const CardsGroup = (props) => {
       transition={{ duration: 0.5, ease: 'easeOut' }}
       viewport={{ amount: 0.6, once: true }}
     >
-      <h2 className="CardsGroup_title" style={{ backgroundColor: props.color }}>
+      <h2
+        className="CardsGroup_title"
+        style={{
+          backgroundColor: props.color,
+          borderColor: props.color, // Borde del mismo color
+        }}
+      >
         {props.title}
       </h2>
       <Carousel responsive={responsive} infinite={true} itemClass="card-item">

@@ -15,19 +15,10 @@
     aspect-ratio: 16/9;
     object-fit: cover;
     width: 100%;
-
     cursor: pointer;
-
-    /* Evita la selección de la imagen */
     user-select: none;
-
-    /* Evita el arrastre de la imagen en navegadores basados en WebKit */
     -webkit-user-drag: none;
-
-    /* Firefox */
     -moz-user-select: none;
-
-    /* Internet Explorer/Edge */
     -ms-user-select: none;
   }
   .Card_info {

@@ -7,9 +7,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; /* Necesario para los pseudo-elementos */
-  z-index: 1; /* Para asegurarte de que el contenido esté sobre el gradiente */
-  flex-wrap: wrap; /* temp? */
+  position: relative; 
+  z-index: 1;
+  flex-wrap: wrap; 
   padding: 40px 15px 40px 15px;
   gap: 20px;
   overflow: hidden;
@@ -24,7 +24,7 @@
     background: inherit;
     filter: blur(5px);
     z-index: -2;
-    /* transform: scale(1.1); */
+   
   }
 
   &::after {
@@ -35,8 +35,8 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, #19191900 -50%, #191919 100%);
-    z-index: -1; /* Coloca el gradiente detrás del contenido de .Banner */
-    pointer-events: none; /* El gradiente no bloqueará la interacción */
+    z-index: -1; 
+    pointer-events: none; 
   }
 
   .Banner_img_container {
@@ -61,7 +61,6 @@
     bottom: 0;
     z-index: 1;
     pointer-events: none;
-    /* box-shadow: inset 0 0 20px 1px var(--frontend); */
   }
 
   .Banner_img_container img {
@@ -84,7 +83,6 @@
     max-width: fit-content;
     font-size: 24px;
     font-weight: 800;
-    /* background-color: var(--frontend); */
     padding: 12px 32px;
     border-radius: 12px;
     margin-bottom: 28px;
