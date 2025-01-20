@@ -12,7 +12,7 @@ const Card = (props) => {
       <img
         src={props.imagen}
         alt="Portada de video"
-        onClick={(e) => props.handlePlay(e, props.item, props.startPos)}
+        onClick={(e) => handlePlay(e, props.item, props.startPos)}
         onMouseDown={handleMouseDown}
       />
       <div className="Card_info">

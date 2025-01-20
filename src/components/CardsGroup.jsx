@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import DataContext from '../context/context';
 import Card from './Card';
 import Carousel from 'react-multi-carousel';
@@ -27,6 +27,12 @@ const responsive = {
 
 const CardsGroup = (props) => {
   const { data, removeVideo, editVideo } = useContext(DataContext);
+  const [startPos, setStartPos] = useState({ x: 0, y: 0 });
+
+  const handleMouseDown = (e) => {
+    setStartPos({ x: e.clientX, y: e.clientY });
+  };
+
   const filteredData = data.filter(
     (item) => item.categoria.toLowerCase() === props.title.toLowerCase()
   );
@@ -70,6 +76,8 @@ const CardsGroup = (props) => {
             video={item.video}
             handleDelete={handleDelete}
             handleEdit={handleEdit}
+            startPos={startPos}
+            handleMouseDown={handleMouseDown}
           />
         ))}
       </Carousel>
