@@ -54,7 +54,7 @@ const CardsGroup = (props) => {
         className="CardsGroup_title"
         style={{
           backgroundColor: props.color,
-          borderColor: props.color, // Borde del mismo color
+          borderColor: props.color,
         }}
       >
         {props.title}
