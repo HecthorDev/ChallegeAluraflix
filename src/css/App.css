@@ -1,0 +1,35 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white;
+  font-family: Roboto, sans-serif;
+}
+
+main {
+  flex: 1;
+  background-color: var(--grey);
+}
+
+.swal2-popup {
+  font-family: Roboto, sans-serif;
+
+  .panel {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .panel-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+}
+
+.no-select {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standard */
+}
