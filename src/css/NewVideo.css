@@ -9,111 +9,140 @@
   max-width: 700px;
   margin: 0 auto;
   overflow: hidden;
+}
 
-  .NewVideo_form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
+.NewVideo_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.NewVideo h2 {
+  font-size: 50px;
+  font-weight: 900;
+  color: var(--almostwhite);
+}
+
+.NewVideo p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.NewVideo h3 {
+  font-family: "Source Sans 3", serif;
+  font-size: 28px;
+  font-weight: 600;
+  border-top: solid 3px #262626;
+  border-bottom: solid 3px #262626;
+  text-align: left;
+  width: 100%;
+  padding: 28px 0;
+}
+
+.NewVideo_buttonscontainer {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.error {
+  color: rgb(255, 77, 101);
+  font-size: medium;
+}
+
+/* FORM */
+
+.TextInput {
+  font-family: "Source Sans 3", serif;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.TextInput input,
+.TextInput textarea {
+  border: 3px solid #262626;
+  border-radius: 10px;
+  padding: 16px 9px;
+  font-weight: 600;
+  color: inherit;
+  line-height: 28px;
+}
+
+.TextInput .sub-text {
+  font-size: medium;
+  color: gray;
+  word-wrap: break-word;
+}
+
+.TextInput .no-resize {
+  resize: none;
+}
+
+.SelectInput {
+  font-family: "Source Sans 3", serif;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.SelectInput select {
+  border: 3px solid #262626;
+  border-radius: 10px;
+  padding: 16px 9px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.SelectInput select.placeholder {
+  color: gray !important;
+}
+
+.SelectInput option {
+  color: var(--grey);
+}
+
+/* Botón de Agregar Video */
+.NewVideo_form button[type="submit"] {
+  background-color: var(--blue); /* Color azul del proyecto */
+  color: white;
+  font-family: "Source Sans 3", serif;
+  font-size: 20px;
+  font-weight: 900;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.NewVideo_form button[type="submit"]:hover {
+  background-color: var(--darkblue); /* Color azul oscuro del proyecto */
+  transform: scale(1.05); /* Efecto de escala al hacer hover */
+}
+
+.NewVideo_form button[type="submit"]:active {
+  transform: scale(0.95); /* Efecto de escala al hacer clic */
+}
+
+@media (max-width: 768px) {
+  .NewVideo {
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 40px;
   }
-  h2 {
-    font-size: 50px;
-    font-weight: 900;
-    color: var(--almostwhite);
-  }
-  p {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  h3 {
-    font-family: "Source Sans 3", serif;
-    font-size: 28px;
-    font-weight: 600;
-    border-top: solid 3px #262626;
-    border-bottom: solid 3px #262626;
-    text-align: left;
-    width: 100%;
-    padding: 28px 0;
-  }
-  .NewVideo_buttonscontainer {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  .error {
-    color: rgb(255, 77, 101);
-    font-size: medium;
-  }
 
-  /* FORM */
-
-  .TextInput {
-    font-family: "Source Sans 3", serif;
-    font-size: 20px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-
-    input,
-    textarea {
-      border: 3px solid #262626;
-      border-radius: 10px;
-      padding: 16px 9px;
-      font-weight: 600;
-      color: inherit;
-      line-height: 28px;
-    }
-
-    .sub-text {
-      font-size: medium;
-      color: gray;
-      word-wrap: break-word;
-    }
-
-    .no-resize {
-      resize: none;
-    }
-  }
-
-  .SelectInput {
-    font-family: "Source Sans 3", serif;
-    font-size: 20px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-
-    select {
-      border: 3px solid #262626;
-      border-radius: 10px;
-      padding: 16px 9px;
-      font-weight: 600;
-      color: var(--white);
-    }
-
-    select.placeholder {
-      color: gray !important; /* Color especial para el placeholder */
-    }
-
-    option {
-      color: var(--grey); /* Color de las demás opciones */
-    }
-  }
-
-  @media (max-width: 768px) {
-    & {
-      padding-left: 15px;
-      padding-right: 15px;
-      gap: 40px;
-    }
-    h2 {
-      font-size: 45px;
-    }
+  .NewVideo h2 {
+    font-size: 45px;
   }
 }

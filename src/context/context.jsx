@@ -4,23 +4,24 @@ import db from '../db.json';
 const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-  const [data, setData] = useState(db);
+  const [data, setData] = useState(() => {
+    const savedData = localStorage.getItem('aluraflixData');
+    return savedData ? JSON.parse(savedData) : db;
+  });
 
   useEffect(() => {
-    setData(db);
-  }, []);
+    localStorage.setItem('aluraflixData', JSON.stringify(data));
+  }, [data]);
 
-  // Función para agregar un video al estado global
   const addVideo = (newVideo) => {
-    setData((prevData) => [...prevData, newVideo]);
+    const videoWithId = { ...newVideo, id: Date.now().toString() };
+    setData((prevData) => [...prevData, videoWithId]);
   };
 
-  // Función para quitar un video del estado global
   const removeVideo = (videoId) => {
     setData((prevData) => prevData.filter((video) => video.id !== videoId));
   };
 
-  // Función para editar un video en el estado global
   const editVideo = (updatedVideo) => {
     setData((prevData) =>
       prevData.map((video) =>

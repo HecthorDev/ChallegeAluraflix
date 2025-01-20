@@ -5,10 +5,10 @@ import { useContext } from 'react';
 import DataContext from '../context/context';
 import { showSuccessAlert, showErrorAlert } from '../utils/alerts';
 import { useNavigate } from 'react-router-dom';
+import '../css/NewVideo.css'; // Importar el CSS
 
 const options = ['Front End', 'Back End', 'Innovación y Gestión'];
 
-// Validación con Yup
 const validationSchema = Yup.object().shape({
   titulo: Yup.string()
     .required('El título es obligatorio.')
@@ -62,13 +62,13 @@ const NewVideo = () => {
         onSubmit={handleSubmit}
       >
         {({ isSubmitting }) => (
-          <Form>
-            <div className="form-group">
+          <Form className="NewVideo_form">
+            <div className="TextInput">
               <label>Título:</label>
               <Field type="text" name="titulo" />
-              <ErrorMessage name="titulo" component="div" />
+              <ErrorMessage name="titulo" component="div" className="error" />
             </div>
-            <div className="form-group">
+            <div className="SelectInput">
               <label>Categoría:</label>
               <Field as="select" name="categoria">
                 <option value="">Seleccione una categoría</option>
@@ -78,22 +78,22 @@ const NewVideo = () => {
                   </option>
                 ))}
               </Field>
-              <ErrorMessage name="categoria" component="div" />
+              <ErrorMessage name="categoria" component="div" className="error" />
             </div>
-            <div className="form-group">
+            <div className="TextInput">
               <label>Imagen:</label>
               <Field type="text" name="imagen" />
-              <ErrorMessage name="imagen" component="div" />
+              <ErrorMessage name="imagen" component="div" className="error" />
             </div>
-            <div className="form-group">
+            <div className="TextInput">
               <label>Video:</label>
               <Field type="text" name="video" />
-              <ErrorMessage name="video" component="div" />
+              <ErrorMessage name="video" component="div" className="error" />
             </div>
-            <div className="form-group">
+            <div className="TextInput">
               <label>Descripción:</label>
-              <Field as="textarea" name="descripcion" />
-              <ErrorMessage name="descripcion" component="div" />
+              <Field as="textarea" name="descripcion" className="no-resize" />
+              <ErrorMessage name="descripcion" component="div" className="error" />
             </div>
             <button type="submit" disabled={isSubmitting}>
               Agregar video

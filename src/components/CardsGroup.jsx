@@ -25,10 +25,18 @@ const responsive = {
 };
 
 const CardsGroup = (props) => {
-  const { data } = useContext(DataContext);
+  const { data, removeVideo, editVideo } = useContext(DataContext);
   const filteredData = data.filter(
     (item) => item.categoria.toLowerCase() === props.title.toLowerCase()
   );
+
+  const handleDelete = (videoId) => {
+    removeVideo(videoId);
+  };
+
+  const handleEdit = (item) => {
+    editVideo(item);
+  };
 
   return (
     <motion.section
@@ -50,6 +58,8 @@ const CardsGroup = (props) => {
             id={item.id}
             imagen={item.imagen}
             video={item.video}
+            handleDelete={handleDelete}
+            handleEdit={handleEdit}
           />
         ))}
       </Carousel>
