@@ -1,5 +1,5 @@
 import "../css/Footer.css";
-const logo = "../../assets/logo.png";
+import logo from "../../assets/logo.png"; // Importar el logo directamente
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGlobe } from "react-icons/fa";

@@ -3,9 +3,8 @@ import Button from "./Button";
 import { NavLink, Link } from "react-router-dom";
 import { GrHomeRounded } from "react-icons/gr";
 import { FiPlus } from "react-icons/fi";
-
-const logo_full = "../../assets/logo.png";
-const logo_compact = "../../assets/logo.png";
+import logo_full from "../../assets/logo.png"; 
+import logo_compact from "../../assets/logo.png"; 
 
 const Header = () => {
   return (
