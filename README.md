@@ -1,6 +1,48 @@
-# 🎬 AluraFlix
+# AluraFlix 🎬
 
-AluraFlix es una plataforma de streaming que te permite compartir y descubrir videos educativos. Desarrollado con React y Vite para ofrecer una experiencia de usuario fluida y moderna.
+[English](#english) | [Español](#español)
+
+## English
+
+A dynamic video platform that allows users to organize and share their favorite educational content, built with React and modern web technologies.
+
+### Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+### Live Demo
+Visit: [AluraFlix Demo](https://hecthordev.github.io/ChallegeAluraflix/)
+
+---
+
+## Español
+
+Una plataforma dinámica de videos que permite a los usuarios organizar y compartir su contenido educativo favorito, construida con React y tecnologías web modernas.
+
+### Inicio Rápido
+
+```bash
+# Instalar dependencias
+npm install
+
+# Ejecutar servidor de desarrollo
+npm run dev
+
+# Construir para producción
+npm run build
+```
+
+### Demo en Vivo
+Visita: [Demo de AluraFlix](https://hecthordev.github.io/ChallegeAluraflix/)
 
 ## 🚀 Características
 
