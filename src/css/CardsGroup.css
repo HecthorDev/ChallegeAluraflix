@@ -16,7 +16,8 @@
   z-index: 1;
   border: 3px solid; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  color: white; 
+  color: white;
+}
 
 /* Espacio entre el título y los videos */
 .CardsGroup .react-multi-carousel-list {
