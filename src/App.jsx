@@ -1,5 +1,6 @@
 import "./css/App.css";
 import { Routes, Route } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Header from "./components/Header";
 import MainSection from "./components/MainSection";
 import NewVideo from "./components/NewVideo";
@@ -16,6 +17,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <SpeedInsights />
     </>
   );
 }
