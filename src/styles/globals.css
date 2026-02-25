@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --brand-blue: #2271D1;
+        --brand-dark: #090F16;
+        --category-frontend: #68D1FF;
+        --category-backend: #00C86F;
+        --category-innovacion: #FFBA05;
+    }
+
+    html {
+        background-color: var(--brand-dark);
+        color: #f5f5f5;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply px-6 py-2 border-2 border-brand-blue text-brand-blue font-bold rounded-lg transition-all hover:bg-brand-blue hover:text-white hover:shadow-brand;
+    }
+
+    .btn-outline {
+        @apply px-6 py-2 border-2 border-white text-white font-bold rounded-lg transition-all hover:border-brand-blue hover:text-brand-blue hover:shadow-brand;
+    }
+}

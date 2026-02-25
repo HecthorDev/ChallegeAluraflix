@@ -4,13 +4,30 @@ import db from '../db.json';
 const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-  const [data, setData] = useState(() => {
-    const savedData = localStorage.getItem('aluraflixData');
-    return savedData ? JSON.parse(savedData) : db;
-  });
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    localStorage.setItem('aluraflixData', JSON.stringify(data));
+    try {
+      const savedData = localStorage.getItem('aluraflixData');
+      if (savedData) {
+        setData(JSON.parse(savedData));
+      } else {
+        setData(db);
+      }
+    } catch (err) {
+      setError(err);
+      setData(db);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (data.length > 0) {
+      localStorage.setItem('aluraflixData', JSON.stringify(data));
+    }
   }, [data]);
 
   const addVideo = (newVideo) => {
@@ -31,7 +48,7 @@ export const DataProvider = ({ children }) => {
   };
 
   return (
-    <DataContext.Provider value={{ data, addVideo, removeVideo, editVideo }}>
+    <DataContext.Provider value={{ data, loading, error, addVideo, removeVideo, editVideo }}>
       {children}
     </DataContext.Provider>
   );

@@ -1,0 +1,8 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import NewVideoPage from '../components/NewVideoPage.jsx';
+---
+
+<MainLayout title="AluraFlix - Nuevo Video">
+	<NewVideoPage client:only="react" />
+</MainLayout>

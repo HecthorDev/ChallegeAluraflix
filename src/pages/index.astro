@@ -1,0 +1,8 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import HomePage from '../components/HomePage.jsx';
+---
+
+<MainLayout title="AluraFlix - Home">
+	<HomePage client:only="react" />
+</MainLayout>
