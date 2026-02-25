@@ -26,4 +26,13 @@
     .btn-outline {
         @apply px-6 py-2 border-2 border-white text-white font-bold rounded-lg transition-all hover:border-brand-blue hover:text-brand-blue hover:shadow-brand;
     }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
