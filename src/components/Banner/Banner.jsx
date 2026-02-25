@@ -95,23 +95,23 @@ const Banner = ({ data = [] }) => {
                 ))}
             </Carousel>
 
-            <style jsx global>{`
-        .custom-dot-list-style {
-          bottom: 20px !important;
-        }
-        .react-multi-carousel-dot button {
-          border: none !important;
-          background: rgba(255, 255, 255, 0.5) !important;
-          width: 12px !important;
-          height: 12px !important;
-          margin: 0 6px !important;
-          transition: all 0.3s ease;
-        }
-        .react-multi-carousel-dot--active button {
-          background: #2271D1 !important;
-          transform: scale(1.3);
-        }
-      `}</style>
+            <style>{`
+                .custom-dot-list-style {
+                  bottom: 20px !important;
+                }
+                .react-multi-carousel-dot button {
+                  border: none !important;
+                  background: rgba(255, 255, 255, 0.5) !important;
+                  width: 12px !important;
+                  height: 12px !important;
+                  margin: 0 6px !important;
+                  transition: all 0.3s ease;
+                }
+                .react-multi-carousel-dot--active button {
+                  background: #2271D1 !important;
+                  transform: scale(1.3);
+                }
+            `}</style>
         </div>
     );
 };
