@@ -6,7 +6,10 @@ export default defineConfig({
     integrations: [react(), tailwind()],
     vite: {
         ssr: {
-            noExternal: ['react-multi-carousel', 'sweetalert2'],
+            noExternal: ['react-icons', 'react-multi-carousel', 'sweetalert2', 'framer-motion'],
+        },
+        optimizeDeps: {
+            include: ['react-multi-carousel', 'sweetalert2']
         }
     }
 });
